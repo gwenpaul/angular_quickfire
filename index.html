@@ -1,0 +1,36 @@
+<!doctype html>
+<html ng-app="firstApp">
+<head>
+  <title>
+    Angular Example
+  </title>
+</head>
+<body>
+  <!-- First controller corresponds to -->
+  <div ng-controller="FirstController">
+    <label for="first"> What is your first name?</label>
+    <input type="text" ng-model="first">
+    <label for="last">What is your last name?</label>
+    <input type="text" ng-model="last">
+    <label for="birth">What month were you born in?</label>
+    <input type="text" ng-model="birth">
+    <button ng-click='updateMessage()'>Message</button>
+    <hr>
+    {{heading + message}}
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+  <script src="scripts.js"></script>
+</body>
+</html>
+
+
+<!-- var firstApp = angular.module('firstApp', []);
+
+firstApp.controller('FirstController', function($scope){
+  $scope.first = 'some';
+  $scope.last = 'one';
+  $scope.heading = ' Message: ';
+  $scope.updateMessage = function() {
+    $scope.message = 'Hello' + $scope.first + '' + $scope.last + '!';
+  };
+}) -->
